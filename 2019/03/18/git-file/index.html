@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Git 冲突解决 | 刘远山个人技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。例如：有一个dev开发分支，此时我们在dev这个分支开发1git checkout -b dev 修改了1.php文件的第一行添加信息如：echo ‘cang’;然后在dev分支进行提交切换到master分支1git checkout master 在master分支上1.ph">
+  <meta name="description" content="在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。例如：有一个dev开发分支，此时我们在dev这个分支开发1git checkout -b dev 修改了1.php文件的第一行添加信息如：echo ‘cang’;然后在dev分支进行提交切换到master分支1git checkout master">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 冲突解决">
 <meta property="og:url" content="http://yoursite.com/2019/03/18/git-file/index.html">
 <meta property="og:site_name" content="刘远山个人技术博客">
-<meta property="og:description" content="在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。例如：有一个dev开发分支，此时我们在dev这个分支开发1git checkout -b dev 修改了1.php文件的第一行添加信息如：echo ‘cang’;然后在dev分支进行提交切换到master分支1git checkout master 在master分支上1.ph">
+<meta property="og:description" content="在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。例如：有一个dev开发分支，此时我们在dev这个分支开发1git checkout -b dev 修改了1.php文件的第一行添加信息如：echo ‘cang’;然后在dev分支进行提交切换到master分支1git checkout master">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-18T07:00:11.442Z">
+<meta property="og:updated_time" content="2019-03-18T07:03:43.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 冲突解决">
-<meta name="twitter:description" content="在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。例如：有一个dev开发分支，此时我们在dev这个分支开发1git checkout -b dev 修改了1.php文件的第一行添加信息如：echo ‘cang’;然后在dev分支进行提交切换到master分支1git checkout master 在master分支上1.ph">
+<meta name="twitter:description" content="在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。例如：有一个dev开发分支，此时我们在dev这个分支开发1git checkout -b dev 修改了1.php文件的第一行添加信息如：echo ‘cang’;然后在dev分支进行提交切换到master分支1git checkout master">
   
     <link rel="alternative" href="/atom.xml" title="刘远山个人技术博客" type="application/atom+xml">
   
@@ -186,6 +186,7 @@
       
         <p>在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。<br>例如：有一个dev开发分支，此时我们在dev这个分支开发<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure></p>
 <p>修改了1.php文件的第一行添加信息<br>如：echo ‘cang’;<br>然后在dev分支进行提交<br>切换到master分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>在master分支上1.php文件的第一行也添加添加信息<br>如：echo ‘bo’;<br>然后在master分支进行提交</p>
 <p>master分支和dev分支各自都分别有新的提交。Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure></p>
 <p>说明:必须手动解决冲突后再提交。git status可以提示冲突的文件。<br>git log –graph –pretty=oneline –abbrev-commit 查看分支的合并情况。<br>最后开发完毕可以删除dev分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev</span><br></pre></td></tr></table></figure></p>

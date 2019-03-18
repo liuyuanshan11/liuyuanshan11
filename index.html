@@ -187,11 +187,9 @@
       
         <p>在Git中，出现的冲突一般情况下都是两个分支之间的冲突。指的是两个已经提交的分支的相同文件相同位置的的不同操作进行了合并。<br>例如：有一个dev开发分支，此时我们在dev这个分支开发<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure></p>
 <p>修改了1.php文件的第一行添加信息<br>如：echo ‘cang’;<br>然后在dev分支进行提交<br>切换到master分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure></p>
-<p>在master分支上1.php文件的第一行也添加添加信息<br>如：echo ‘bo’;<br>然后在master分支进行提交</p>
-<p>master分支和dev分支各自都分别有新的提交。Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure></p>
-<p>说明:必须手动解决冲突后再提交。git status可以提示冲突的文件。<br>git log –graph –pretty=oneline –abbrev-commit 查看分支的合并情况。<br>最后开发完毕可以删除dev分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev</span><br></pre></td></tr></table></figure></p>
-<p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。冲突发生的时候,最好能联系一下开发的人员,一起解决冲突。仔细对比,取综合的并集,就是尽量把所有不同的文件保留,共同的只留一份。多人协作开发的时候,如果出现了你没有改过的文件跟你冲突了,一定要去找到当事者,说清楚是如何冲突,然后协商解决,千万不要擅自拉别的分支去试图解决冲突,或找文件覆盖。当开发任务比较多,又建议开多个分支,分别进行开发。</p>
-
+        
+          <a class="article-more-a" href="/2019/03/18/git-file/#more">more >></a>
+        
       
 
       
